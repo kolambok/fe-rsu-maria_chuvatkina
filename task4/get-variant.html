@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1> The Form</h1>
+    <form action="http://httpbin.org/get" method="GET">
+        <fieldset>
+            <legend>Personal data</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="firstname">First name</label>
+                    </td>
+                    <td>
+                        <input id="firstname" type="text" name="firstname">
+                    </td> 
+                </tr>
+                <tr>
+                    <td>
+                        <label for="middlename">Middle name</label>
+                    </td>
+                    <td>
+                        <input id="middlename" type="text" name="middlename">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="surname">Surname</label>
+                    </td>
+                    <td>
+                        <input id="surname" type="text" name="surname">
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                        Sex  
+                    </td>
+                    <td>
+                        <input id="male" type="radio" name="sex" value="Male" checked>
+                        <label for="male">Male</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="female" type="radio" name="sex" value="Female">
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="age">Age</label>
+                    </td>
+                    <td>
+                        <input id="age" type="text" name="age">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Counry
+                    </td>
+                    <td>
+                        <input list="country">
+                        <datalist id="country">
+                            <option value="Russia">
+                            <option value="United States of America">
+                            <option value="Australia">
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        City
+                    </td>
+                    <td>
+                        <label><input type="checkbox" name="city" value="Ryazan">Ryazan</label>
+                        <label><input type="checkbox" name="city" value="Moskow">Moskow</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Photography
+                    </td>
+                    <td>
+                        <input type="file">
+                    </td>
+                </tr>
+            </table>
+            <hr>
+            <table>
+                <tr>
+                    <td>
+                        Title
+                    </td>
+                    <td>
+                        <select name="title[]" multiple size="8">
+                            <optgroup label="Technologies">
+                                <option value="web_master">Web Master</option>
+                                <option value="admin_db">Database Administrator</option>
+                                <option value="design">Computer-aided design</option>
+                            </optgroup>
+                            <optgroup label="Finance">
+                                <option value="economic_plan">Economic Planning</option>
+                                <option value="management_acc">Management accounting</option>
+                                <option value="budget">Budgetting and planning</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Salary
+                    </td>
+                    <td>
+                        <input type="range" min="18" max="101" step="1" value="70">
+                    </td>
+                </tr>
+            </table>
+            <textarea rows="10" cols="45" name="tell_us" placeholder="Tell us about yourself..."></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Contact Information</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="site">Site</label>
+                    </td>
+                    <td>
+                        <input id="site" type="text" name="site">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="e-mail">E-mail</label>
+                    </td>
+                    <td>
+                        <input id="e-mail" type="text" name="e-mail">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phone">Phone</label>
+                    </td>
+                    <td>
+                        <input id="phone" type="text" name="phone">
+                    </td>
+                </tr>
+            </table>             
+        </fieldset>
+        <br>
+        <label for="password">Password</label>
+        <input id="password" type="text" name="password" required>
+        <hr>
+        <input type="submit">
+        <input type="reset">
+    </form>   
+</body>
+</html>

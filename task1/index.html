@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li><a href="#">Searching</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Card</a></li>
+        <li><a href="#">Play</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Mail</a></li>
+    </ul>
+    <ol>
+        <li value="7">Searching</li>
+        <li>Card</li>
+        <li>Market</li>
+        <li>News</li>
+        <li>Dictionaries</li>
+        <li>Pictures</li>
+        <li>Yet
+            <ul>
+                <li>Flights</li>
+                <li>Auto</li>
+                <li>Poster</li>
+                <li>Blogs</li>
+            </ul>
+        </li>
+    </ol>
+    <dl>
+        <dt>Tag</dt>
+        <dd>element of Hypertext Markup Language</dd>
+        <dt>The Semantic Web</dt>
+        <dd>This direction of development of the World Wide Web, the aim of which is to provide information in a form suitable for machine processing</dd>
+    </dl>
+    <hr>
+    <table border="1">
+        <caption>CSS Generated content for pseudo-elements</caption>
+        <tr>
+            <th>IE</th>
+            <th>Firefox</th>
+            <th>Chrome</th>
+            <th>Safari</th>
+            <th>Opera</th>
+            <th>iOS Safari</th>
+            <th>Opera Mini</th>
+            <th>Android Browser</th>
+            <th>Chrome for Android</th>
+        </tr>
+        <tr>
+            <td rowspan="2"></td>
+            <td rowspan="4"></td>
+            <td>27</td>
+            <td rowspan="3"></td>
+            <td rowspan="5"></td>
+            <td rowspan="4"></td>
+            <td rowspan="5"></td>
+            <td></td>
+            <td rowspan="5"></td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td>2.3</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>33</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>34</td>
+            <td>5.1</td>
+            <td>4.1</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>thirty</td>
+            <td>35</td>
+            <td>6.1</td>
+            <td>6.1</td>
+            <td>4.3</td>
+        </tr>
+        <tr>
+            <td>eleven</td>
+            <td>31</td>
+            <td>36</td>
+            <td>7</td>
+            <td>23</td>
+            <td>7.1</td>
+            <td>7</td>
+            <td>4.4</td>
+            <td>36</td>
+        </tr>
+        <tr>
+            <td colspan="9">Method of displaying text or images before or after the given element's contents using the: before and: after pseudo-elements</td>
+        </tr>
+    </table>
+    <hr>
+    <form action="http://httpbin.org/get">
+        <fieldset>
+            <legend>Personal data</legend>
+            <table>
+                <tr>
+                    <td>
+                        <label for="surname">Surname</label>
+                        <input id="surname" type="text" name="surname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="firstname">First name</label>
+                        <input id="firstname" type="text" name="firstname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="middlename">Middle name</label>
+                        <input id="middlename" type="text" name="middlename">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        You are 
+                        <input id="male" type="radio" name="sex" value="Male" checked>
+                        <label for="male">male</label>
+                        <input id="female" type="radio" name="sex" value="Female">
+                        <label for="female">female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="age">Age</label>
+                        <input id="age" type="text" name="age">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Counry of Residence
+                        <input list="country">
+                        <datalist id="country">
+                            <option value="Russia">
+                            <option value="United States of America">
+                            <option value="Australia">
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        City
+                        <label><input type="checkbox" name="city" value="Ryazan">Ryazan</label>
+                        <label><input type="checkbox" name="city" value="Moskow">Moskow</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Photography
+                        <input type="file">
+                    </td>
+                </tr>
+            </table>
+            <hr>
+            <table>
+                <tr>
+                    <td>
+                        Title
+                        <select name="title[]" multiple size="8">
+                            <optgroup label="Technologies">
+                                <option value="web_master">Web Master</option>
+                                <option value="admin_db">Database Administrator</option>
+                                <option value="design">Computer-aided design</option>
+                            </optgroup>
+                            <optgroup label="Finance">
+                                <option value="economic_plan">Economic Planning</option>
+                                <option value="management_acc">Management accounting</option>
+                                <option value="budget">Budgetting and planning</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Salary
+                        <input type="range" min="18" max="101" step="1" value="70">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea rows="10" cols="45" name="tell_us" placeholder="Tell us about yourself..."></textarea>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    <fieldset>
+        <legend>Contact Information</legend>
+        <table>
+            <tr>
+                <td>
+                    <label for="site">Site</label>
+                    <input id="site" type="text" name="site">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="e-mail">E-mail</label>
+                    <input id="e-mail" type="text" name="e-mail">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="phone">Phone</label>
+                    <input id="phone" type="text" name="phone">
+                </td>
+            </tr>
+        </table>             
+    </fieldset>
+        <br>
+        <label for="password">Password</label>
+        <input id="password" type="text" name="password" value="" required>
+        <br><br>
+        <input type="submit">
+        <input type="reset">
+    </form>
+</body>
+</html>
