@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        h1{
+            text-align: center;
+            font-variant: small-caps;
+            letter-spacing: 1em;
+            line-height: 2em;
+            font-weight: bold;
+        }
+
+        span{
+            vertical-align: super;
+        }
+
+        h2{
+            text-shadow: 0 0 20px rgba(0, 0, 140, 1);
+        }
+
+        h3{
+            line-height: 3em;
+        }
+
+        .image{
+            background-image: url(http://img-fotki.yandex.ru/get/5110/reist2000.2/0_7a667_afd7848e_XL.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 500px;
+        }
+
+        p{
+            color: #888;
+        }
+
+        .sans{
+            font-size: 2em;
+            font-family: Verdana, Arial, sans-serif;
+            text-indent: 5em;
+        }
+
+        .serif{
+            font-size: 1.5rem;
+            font-family: Georgia, Times, serif;
+        }
+
+        .monospace{
+            font-size: 1.2vw;
+            font-family: Courier, Lucida, monospace;
+        }
+
+        .italic{
+            font-size: 4vh;
+            font-style: italic;
+        }
+
+        .normal-style{
+            font-size: 50%;
+            font-style: normal;
+        }
+
+        .oblique{
+            font-size: .7cm;
+            font-style: oblique;
+        }
+
+        .overline{
+            font-size: 15mm;
+            text-decoration: overline;
+        }
+
+        .underline{
+            font-size: .5in;
+            text-decoration: underline;
+        }
+
+        .through{
+            font-size: 24pt;
+            text-decoration: line-through;
+        }
+
+        .capitalize{
+            font-size: 10px;
+            text-transform: capitalize;
+        }
+
+        .versa{
+            direction: rtl;
+        }
+
+        .pre{
+            white-space: pre-wrap;
+        }
+
+        .word-space{
+            word-spacing: 3em;
+        }
+
+        .color-block{
+            width: 100px;
+            height: 50px;
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .hexa{
+            background-color: #00f;
+        }
+
+        .rgb{
+            background-color: rgb(0, 0, 255);
+        }
+
+        .rgba{
+            background-color: rgba(0, 0, 255, .4);
+        }
+    </style>
+</head>
+<body>
+    <h1>Inline<span>Styles</span></h1>
+    <h2>Background</h2>
+    <div class="image"></div>
+    <h2>Fonts</h2>
+    <h3>Relative</h3>
+    <h4>font-size: 2em</h4>
+    <p class="sans">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <br>
+    <h4>font-size: 1.5rem</h4>
+    <p class="serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <br>
+    <h4>font-size: .9vw</h4>
+    <p class="monospace">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <br>
+    <h4>font-size: 4vh"</h4>
+    <p class="italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <br>
+    <h4>font-size: 50%</h4>
+    <p class="normal-style">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <br><br>
+    <h3>Fixed</h3>
+    <h4>font-size: .7cm</h4>
+    <p class="oblique">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <br>
+    <h4>font-size: 15mm</h4>
+    <p class="overline">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <br>
+    <h4>font-size: .5in</h4>
+    <p class="underline">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <br>
+    <h4>font-size: 24pt</h4>
+    <p class="through">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <br>
+    <h4>font-size: 10px</h4>
+    <p class="capitalize">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <br><br>
+    <h3>Default</h3>
+    <h4>Default</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <br><br>
+    <h3>Other styles</h3>
+    <p class="versa">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p class="pre">Lorem   ipsum 
+    dolor sit amet, con
+    sectetur a  dipisci       ng elit.</p>
+    <p class="word-space">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <br><br>
+    <h2>Colors</h2>
+    <div class="color-block hexa">Hexadecimal</div>
+    <div class="color-block rgb">RGB</div>
+    <div class="color-block rgba">RGBA</div>
+</body>
+</html>

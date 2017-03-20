@@ -1,0 +1,124 @@
+html{
+    font-size: 14px;
+}
+
+h1{
+    text-align: center;
+    font-variant: small-caps;
+    letter-spacing: 1em;
+    line-height: 2em;
+    font-weight: bold;
+}        
+
+#super{
+    vertical-align: super;
+}
+
+h2, h3, h4{
+    text-shadow: 0 0 20px rgba(0, 0, 140, 1);
+}
+
+h2{
+    color: #ff1111;
+    text-decoration: underline;
+}
+
+h3{
+    text-transform: uppercase;
+    line-height: 3em;
+}
+
+.image{
+    background-image: url(http://img-fotki.yandex.ru/get/5110/reist2000.2/0_7a667_afd7848e_XL.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 500px;   
+}
+
+p{
+    color: #888;
+}
+
+.sans{
+    font-size: 2em;
+    font-family: Verdana, Arial, sans-serif;
+    text-indent: 5em;
+}
+
+.serif{
+    font-size: 1.5rem;
+    font-family: Georgia, Times, serif;
+}
+
+.monospace{
+    font-size: 1.2vw;
+    font-family: Courier, Lucida, monospace;
+}
+
+.italic{
+    font-size: 4vh;
+    font-style: italic;
+}
+
+.normal-style{
+    font-size: 50%;
+    font-style: normal;
+}
+
+.oblique{
+    font-size: .7cm;
+    font-style: oblique;
+}
+
+.overline{
+    font-size: 15mm;
+    text-decoration: overline;
+}
+
+.underline{
+    font-size: .5in;
+    text-decoration: underline;
+}
+
+.through{
+    font-size: 24pt;
+    text-decoration: line-through;
+}
+
+.capitalize{
+    font-size: 10px;
+    text-transform: capitalize;
+}
+
+.versa{
+    direction: rtl;
+}
+
+.pre{
+    white-space: pre-wrap;
+}
+
+.word-space{
+    word-spacing: 3em;
+}
+
+.color-block{
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.hexa{
+    background-color: #00f;
+}
+
+.rgb{
+    background-color: rgb(0, 0, 255);
+}
+
+.rgba{
+    background-color: rgba(0, 0, 255, .4);
+}
