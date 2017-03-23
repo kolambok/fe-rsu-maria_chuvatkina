@@ -1,0 +1,37 @@
+*{
+	margin: 1px;
+	padding: 0;
+}
+
+table{
+	font-family: Arial, Colibri, sans-serif;
+	font-size: .9em;
+	color: #4C6782;
+}
+
+th{
+	text-transform: uppercase;
+	font-size: .75em;
+	background-color: #E3EAF3;
+	padding: 5px;
+}
+
+.name{
+	text-transform: capitalize;
+}
+
+tr{
+	background-color: #E8EDF4;
+}
+
+tr:hover{
+	background-color: #E2E5E9;
+}
+
+.odd{
+	background-color: #F2F6FA;
+}
+
+td{
+	padding: 17px;
+}
