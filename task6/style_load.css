@@ -1,0 +1,47 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.outter{
+	width: 120px;
+	height: 120px;
+	outline: 3px solid #8091A8;
+	margin-left: calc(50% - 60px);
+	margin-top: 170px;
+}
+
+.load{
+}
+
+button{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	background: #785E6D;
+	text-transform: capitalize;
+	font-weight: bold;
+	font-size: 20px;
+	color: #4EE9DD;
+	border: none;
+	outline: 3px solid #6092D2;
+	animation-name: load;
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+}
+
+@keyframes load{
+	50%{
+		color: #287B6A;
+	}
+
+	75%{
+		color: #09C8B9;
+	}
+
+	100%{
+		transform: rotate(360deg);
+		color: #42FAEC;
+	}
+}

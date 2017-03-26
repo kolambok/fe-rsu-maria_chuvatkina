@@ -1,0 +1,11 @@
+*{
+	margin: 1px;
+	padding: 0;
+}
+
+.image{
+	background: url(droid-320x210.jpg) no-repeat;
+	width: 202px;
+	height: 202px;
+	box-shadow: inset 0 0 12px 1px #454545;
+}

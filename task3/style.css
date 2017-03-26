@@ -1,0 +1,39 @@
+*{
+	margin: 4px 2px;
+	padding: 0;
+}
+
+body{
+	font-size: 25px;
+}
+
+a{
+	text-decoration: none;
+	letter-spacing: .6px;
+	color: blue;
+	transition: .5s;
+}
+
+a:last-child{
+	transition: 0s;
+}
+
+a::after{
+	white-space: pre-wrap;
+	content: " | ";
+	color: red;
+}
+
+a:last-child::after{
+	content: "";
+}
+
+a:hover {
+	border-bottom: 3px solid blue;
+}
+
+a:hover::after{
+	white-space: pre-wrap;
+	content: "   ";
+	color: red;
+}

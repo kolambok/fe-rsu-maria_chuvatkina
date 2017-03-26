@@ -1,0 +1,43 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+div{
+	display: inline-block;
+}
+
+.block{
+	width: 40px;
+	height: 200px;
+	background: red;
+	position: relative;
+}
+
+.block:last-child{
+	float: right;
+}
+
+.circle{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: blue;
+	position: absolute;
+	top: 75px;
+	animation-name: circleBounce;
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-direction: alternate-reverse;
+}
+
+@keyframes circleBounce{
+	0%{
+		right: 40px;
+	}
+
+	100%{
+		right: 934px;
+	}
+}

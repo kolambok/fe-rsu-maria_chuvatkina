@@ -1,0 +1,23 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.text{
+	margin: 17px 5px;
+	width: 335px;
+}
+
+h1{
+	color: #fff;
+	background: #569099;
+	padding: 10px;
+	margin: 17px 0;
+}
+
+p{
+	background: #CAD8D0;
+	padding: 10px;
+	margin: 22px 0;
+	line-height: 18px;
+}

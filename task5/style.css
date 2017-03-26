@@ -1,0 +1,29 @@
+*{
+	margin: 10px 2px;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+p{
+	background: #CAD8D0;
+	width: 665px;
+	font-size: .6em;
+	padding: 10px;
+	line-height: 1.2em;
+}
+
+@media screen and (max-width: 500px){
+	*{
+		margin: 8px 2px;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+		p{
+		background: #CAD8D0;
+		width: 362px;
+		font-size: 20px;
+		padding: 10px;
+		line-height: 23px;
+	}
+}

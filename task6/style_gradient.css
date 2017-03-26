@@ -1,0 +1,73 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+div{
+	margin: 120px auto;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background: radial-gradient(circle, red, blue);
+	animation-duration: 6s;
+	animation-name: circleTransform;
+	animation-iteration-count: infinite;
+}
+
+@keyframes circleTransform{
+	0%{
+		background: radial-gradient(circle, red, blue);
+		border-radius: 50%;
+		transform: skewX(0deg);
+		width: 150px;
+		height: 150px;
+	}
+	20%{
+		width: 150px;
+		height: 150px;
+		border-radius: 0;
+		transform: skewX(0deg);
+		background: radial-gradient(circle, red, blue);
+	}
+
+	40%{
+		width: 150px;
+		height: 150px;
+		border-radius: 0;
+		transform: skewX(0deg);
+		background: linear-gradient(to top, red, blue);
+	}
+
+	60%{
+		border-radius: 0;
+		width: 50px;
+		height: 50px;
+		transform: skewX(60deg);
+		background: linear-gradient(to top, red, blue);
+	}
+
+	80%{
+		width: 150px;
+		height: 150px;
+		border-radius: 0;
+		transform: skewX(0deg);
+		transform: rotate(270deg);
+		background: linear-gradient(to top, red, blue);
+	}
+
+	90%{
+		width: 150px;
+		height: 150px;
+		border-radius: 0;
+		transform: skewX(0deg);
+		background: linear-gradient(to bottom, red, violet);
+	}
+
+	100%{
+		width: 150px;
+		height: 150px;
+		transform: skewX(0deg);
+		border-radius: 50%;
+		background: linear-gradient(to bottom, red, violet);
+	}
+}

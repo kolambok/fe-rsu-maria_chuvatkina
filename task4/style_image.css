@@ -1,0 +1,11 @@
+*{
+	margin: 4px 1px;
+	padding: 0;
+}
+
+.circle{
+	border: 2px solid #ccc;
+	width: 300px;
+	height: 200px;
+	background: radial-gradient(circle, #00BC9E 33%, #fff 0%);
+}
