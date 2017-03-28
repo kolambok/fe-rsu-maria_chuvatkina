@@ -11,7 +11,7 @@ a{
 	text-decoration: none;
 	letter-spacing: .6px;
 	color: blue;
-	transition: .5s;
+	transition: 1s;
 }
 
 a:last-child{
@@ -22,10 +22,12 @@ a::after{
 	white-space: pre-wrap;
 	content: " | ";
 	color: red;
+	transition: 1s;
 }
 
 a:last-child::after{
-	content: "";
+	content: " | ";
+	color: white;
 }
 
 a:hover {
@@ -34,6 +36,6 @@ a:hover {
 
 a:hover::after{
 	white-space: pre-wrap;
-	content: "   ";
-	color: red;
+	content: " | ";
+	color: white;
 }

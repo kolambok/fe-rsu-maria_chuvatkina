@@ -34,10 +34,10 @@ div{
 
 @keyframes circleBounce{
 	0%{
-		right: 40px;
+		right: 2%;
 	}
 
 	100%{
-		right: 934px;
+		right: 95%;
 	}
 }
