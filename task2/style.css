@@ -1,0 +1,31 @@
+html,
+body{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.arrow-box{
+	color: #fff;
+	background: #88B7D5;
+	border: 4px solid #C2E1F5;
+	margin: 39px 8px;
+	padding: 10px;
+	width: 350px;
+	position: relative;
+	line-height: 18px;
+}
+
+.arrow-box:after{
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 44px;
+	height: 44px;
+	transform: rotate(45deg);
+	border-top: 4px solid #C2E1F5;
+	border-left: 4px solid #C2E1F5;
+	left: 161px;
+	top: -26px;
+	background: linear-gradient(to bottom right, rgba(136,183,213,1) 60%, rgba(136,183,213,0) 40%);
+}
