@@ -1,0 +1,50 @@
+html,
+body{
+    background: #000;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.menu{
+    width: auto;
+    height: 36px;
+    background: url(bg.png) 0 0;
+    border: 7px solid #fff;
+    position: relative;
+}
+
+.left-list{
+    float: left;
+}
+
+.menu li{
+    display: inline-block;
+}
+
+.mail{
+    background: url(mail.png) no-repeat 26% 53% #387BB2;
+    width: 58px;
+    height: 36px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.notice{
+    background: url(page.png) no-repeat 15% 53% #387BB2;
+    width: 82px;
+    height: 36px;
+    position: absolute;
+    top: 0px;
+    left: 60px; 
+}
+
+.person{
+    background: url(user.png) no-repeat 20% 53% #387BB2;
+    width: 56px;
+    height: 36px;
+    position: absolute;
+    top: 0px;
+    left: 144px;
+}
