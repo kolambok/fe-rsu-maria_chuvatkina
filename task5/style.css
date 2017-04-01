@@ -8,9 +8,9 @@ body{
 
 .menu{
     width: auto;
-    height: 36px;
+    height: 35px;
     background: url(bg.png) 0 0;
-    border: 7px solid #fff;
+    border: 8px solid #fff;
     position: relative;
 }
 
@@ -20,31 +20,163 @@ body{
 
 .menu li{
     display: inline-block;
+    cursor: pointer;
+    transition: .3s;
 }
 
 .mail{
-    background: url(mail.png) no-repeat 26% 53% #387BB2;
-    width: 58px;
-    height: 36px;
+    background: url(mail.png) no-repeat 25% 53% #387BB2;
+    width: 57px;
+    height: 35px;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0%;
+    left: 0%;
 }
 
 .notice{
     background: url(page.png) no-repeat 15% 53% #387BB2;
     width: 82px;
-    height: 36px;
+    height: 35px;
     position: absolute;
-    top: 0px;
-    left: 60px; 
+    top: 0%;
+    left: 3.7em;
 }
 
 .person{
-    background: url(user.png) no-repeat 20% 53% #387BB2;
-    width: 56px;
-    height: 36px;
+    background: url(user.png) no-repeat 25% 53% #387BB2;
+    width: 55px;
+    height: 35px;
     position: absolute;
-    top: 0px;
-    left: 144px;
+    top: 0%;
+    left: 8.95em;
+}
+
+.flag{
+    background: url(flag.png) no-repeat 50% 53% #387BB2;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 0%;
+    left: 12.5em;
+}
+
+.check{
+    background: url(checked.png) no-repeat 50% 53% #387BB2;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 0%;
+    left: 14.8em;
+}
+
+.refresh{
+    background: url(refresh.png) no-repeat 50% 53% #387BB2;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 0%;
+    right: 9.85em;
+}
+
+.widget{
+    background: url(widget.png) no-repeat 50% 53% #387BB2;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 0%;
+    right: 7.55em;
+}
+
+.exit{
+    background: url(exit.png) no-repeat 91% 53% #2F2F35;
+    width: 119px;
+    height: 35px;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+.exit:before{
+    display: inline-block;
+    content: "Выход";
+    padding: 9px 26px;
+    letter-spacing: .2px;
+    color: #fff;
+}
+
+li:hover{
+    background-color: #E03838;
+}
+
+li.exit:hover{
+    background-color: #4F4f4f;
+}
+
+/*----------------------------------------
+            NOTIFICATIONS
+----------------------------------------*/
+
+span{
+    position: absolute;
+    top: 23%;
+    display: inline-block;
+    background-color: #E03838;
+    color: #fff;
+    border-radius: 50%;
+    min-width: 16px;
+    height: 19px;
+    font-size: 10px;
+    text-align: center;
+    padding: 4px 7px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.mail-num{
+    left: 46%;
+}
+
+.notice-num{
+    left: 2.6em;
+}
+
+.person-num{
+    left: 2.6em;
+}
+
+/*----------------------------------------
+            500px
+----------------------------------------*/
+
+@media screen and (max-width: 500px){
+    .refresh{
+        background: url(refresh.png) no-repeat 50% 53% #387BB2;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 0%;
+        right: 2.25em;
+    }
+
+    .widget{
+        background: url(widget.png) no-repeat 50% 53% #387BB2;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 0%;
+        right: 4.55em;
+    }
+
+    .exit{
+        background: url(exit.png) no-repeat 61% 53% #2F2F35;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 0%;
+        right: 0%;
+    }
+
+    .exit:before{
+        content: "";
+    }
 }
