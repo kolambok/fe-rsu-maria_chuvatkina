@@ -2,6 +2,20 @@ html,
 body {
 	margin: 0;
 	height: 100%;
+	font-family: Proxima Nova Regular, Arial, sans-serif;
+}
+
+@font-face{
+	font-family: Proxima Nova Regular;
+	src: url(Proxima Nova/Proxima Nova Regular.otf);
+}
+
+li {
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
 }
 
 .container {
@@ -19,6 +33,10 @@ body {
 	justify-content: flex-end;
 }
 
+.header-menu__link {
+	color: #78829d;
+}
+
 .main {
 	display: flex;
 	overflow-y: hidden;
@@ -28,20 +46,70 @@ body {
 	display: flex;
 	flex-direction: column;
 	flex-basis: 20%;
+	background: #19202e;
+	align-content: stretch;
 }
 
-.nav {
+.nav-add,
+.nav,
+.second-nav,
+.notifications {
 	background: #1f2637;
+	border-top: 1px solid #282f41;
+	border-bottom: 1px solid #141824;
+}
+
+.nav-add__button {
+	display: flex;
+	flex-basis: 70%;
+	background: #f2795a;
+	border: none;
+	border-radius: 3%;
+	color: #fff;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.nav__link,
+.second-nav__link {
+	color: #78829d;
+}
+
+
+.notifications__paragraph,
+.notifications__time {
+	color: #6f7d95;
+}
+
+.notifications__link {
+	color: #97b3ce;
 }
 
 .section {
-    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.inner-menu {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 15%;
+}
+
+.nav-block {
+	display: flex;
+	justify-content: space-between;
+}
+
+.inner-nav {
+	display: flex;
 }
 
 .content {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	overflow-y: scroll;
 }
 
 .footer {
