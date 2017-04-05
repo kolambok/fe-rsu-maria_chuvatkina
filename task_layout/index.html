@@ -9,18 +9,25 @@
 <body class="container">
 
 	<header class="header">
+
 		<div class="header-menu">
+
 			<li class="header-menu__item"><a href="#" class="header-menu__link">Help Center</a></li>
-			<li class="header-menu__item header-menu__item_circle">
-				<a href="#" class="header-menu__link">
+
+			<li class="header-menu__item header-menu__item_circle"></li>
+
+			<li class="header-menu__item header-menu__item_no-padding">
+				<a href="#" class="header-menu__link header-menu__link_circle">
 				Our Support</a>
 			</li>
+
 			<li class="header-menu__item header-menu__item_profile">
 				<span class="header-menu__photo"></span>
 				<a href="#" class="header-menu__link_profile">
 				John Doe</a>
 				<span class="header-menu__angle"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></span>
 			</li>
+
 		</div>
 	</header>
 
@@ -33,26 +40,35 @@
 			</nav>
 
 			<nav class="nav">
-				<li class="nav__item"><a href="#" class="nav__link">Now Reading</a></li>
-				<li class="nav__item"><a href="#" class="nav__link">Browse</a></li>
-				<li class="nav__item"><a href="#" class="nav__link">Buy Books</a></li>
-				<li class="nav__item"><a href="#" class="nav__link">Favourite Books</a></li>
-				<li class="nav__item"><a href="#" class="nav__link">Wishlist</a></li>
-				<li class="nav__item"><a href="#" class="nav__link">History</a></li>
+
+				<li class="nav__item"><span class="nav__span"><i class="fa fa-book" aria-hidden="true"></i></span><a href="#" class="nav__link">Now Reading</a></li>
+
+				<li class="nav__item"><span class="nav__span"><i class="fa fa-globe" aria-hidden="true"></i></span><a href="#" class="nav__link">Browse</a></li>
+
+				<li class="nav__item"><span class="nav__span"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span><a href="#" class="nav__link">Buy Books</a></li>
+
+				<li class="nav__item"><span class="nav__span"><i class="fa fa-star" aria-hidden="true"></i></span><a href="#" class="nav__link">Favourite Books</a></li>
+
+				<li class="nav__item"><span class="nav__span"><i class="fa fa-list" aria-hidden="true"></i></span><a href="#" class="nav__link">Wishlist</a></li>
+
+				<li class="nav__item"><span class="nav__span"><i class="fa fa-clock-o" aria-hidden="true"></i></span><a href="#" class="nav__link">History</a></li>
+
 			</nav>
 
 			<nav class="second-nav">
-				<li class="second-nav__item"><a href="#" class="second-nav__link">Must Read Titles</a></li>
-				<li class="second-nav__item"><a href="#" class="second-nav__link">Best Of List</a></li>
-				<li class="second-nav__item"><a href="#" class="second-nav__link">Classic Novels</a></li>
-				<li class="second-nav__item"><a href="#" class="second-nav__link">Non Fiction</a></li>
+				<li class="second-nav__item"><span class="second-nav__marker second-nav__marker_red">&bull;</span><a href="#" class="second-nav__link">Must Read Titles</a></li>
+				<li class="second-nav__item"><span class="second-nav__marker second-nav__marker_yellow">&bull;</span><a href="#" class="second-nav__link">Best Of List</a></li>
+				<li class="second-nav__item"><span class="second-nav__marker second-nav__marker_blue">&bull;</span><a href="#" class="second-nav__link">Classic Novels</a></li>
+				<li class="second-nav__item"><span class="second-nav__marker second-nav__marker_violet">&bull;</span><a href="#" class="second-nav__link">Non Fiction</a></li>
 			</nav>
 
 			<article class="notifications">
-				<p class="notifications__paragraph">You added <a href="#" class="notifications__link">Fight Club</a> by <a href="#" class="notifications__link">Chuck Palahniuk</a> to your <a href="#" class="notifications__link">Must Read Titles</a>.</p>
-				<span class="notifications__time">24 minutes ago</span>
-				<p class="notifications__paragraph">You added <a href="#" class="notifications__link">The Trial</a> by <a href="#" class="notifications__link">Franz Kafka</a> to your <a href="#" class="notifications__link">Must Read Titles</a>. </p>
-				<span class="notifications__time">48 minutes ago</span>
+				<ul class="notifications_list">
+					<li class="notifications-list__item">You added <a href="#" class="notifications-list__link">Fight Club</a> by <a href="#" class="notifications-list__link">Chuck Palahniuk</a> to your <a href="#" class="notifications-list__link">Must Read Titles</a>.</li>
+					<span class="notifications-list__time">24 minutes ago</span>
+					<li class="notifications-list__item">You added <a href="#" class="notifications-list__link">The Trial</a> by <a href="#" class="notifications-list__link">Franz Kafka</a> to your <a href="#" class="notifications-list__link">Must Read Titles</a>. </li>
+					<span class="notifications-list__time">48 minutes ago</span>
+				</ul>
 			</article>
 		</aside>
 
