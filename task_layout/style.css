@@ -175,6 +175,10 @@ a{
 	color: #fff;
 }
 
+.notifications-list__item {
+	width: 156px;
+}
+
 .notifications-list__item,
 .notifications-list__time {
 	color: #6f7d95;
@@ -202,17 +206,16 @@ a{
 }
 
 .inner-menu {
-	display: flex;
-	flex-direction: column;
-	flex-basis: 50%;
 	background: #eef1f7;
 	z-index: 1;
+	height: 120px;
 }
 
 .inner-header {
-	font-size: 18pt;
+	font-size: 14pt;
 	color: #444c63;
 	background: #eef1f7;
+	padding-left: 24px;
 }
 
 .inner-header,
@@ -228,21 +231,76 @@ a{
 	display: flex;
 	justify-content: space-between;
 	background: #eef1f7;
+	padding-left: 20px;
+	flex-basis: 48px;
 }
 
 .inner-nav {
 	display: flex;
-	background: #eef1f7;
+	border-top: 1px solid #f4f6fa;
 }
 
-.inner-nav__item {
+.inner-nav__button {
+	border: none;
+	background: #eef1f7;
+	border-radius: 16px;
+	padding: 6px 12px;
+	margin: 6px 12px 6px 0;
+	transition: .5s;
+}
+
+.inner-nav__button_active {
+	border: none;
 	background: #97b3ce;
 	border-radius: 16px;
 	padding: 6px 12px;
+	margin: 6px 12px 6px 0;
+}
+
+.inner-nav__button:hover {
+	background: #97b3ce;
 }
 
 .inner-nav__link {
+	color: #8c97b2;
+}
+
+.inner-nav__link_active,
+.inner-nav__link:hover {
 	color: #fff;
+}
+
+.inner-nav__button:hover .inner-nav__link  {
+	transition: .5s;
+}
+
+.search-form__input {
+	width: 400px;
+	border: 1px solid #c7cddb;
+	border-radius: 20px;
+	padding: 8px 0 8px 18px;
+	margin-top: 4px;
+	margin-right: 20px;
+}
+
+.search-form__input:focus {
+	outline: none;
+}
+
+.search-form {
+	position: relative;
+}
+
+.search-form__image{
+	position: absolute;
+	color: #949eb7;
+	top: 10px;
+	left: 390px;
+	cursor: pointer;
+}
+
+.search-form__submit {
+	display: none;
 }
 
 .content {
@@ -252,13 +310,54 @@ a{
 	overflow-y: scroll;
 }
 
+.content__item {
+	margin: 29px 10px 15px;
+}
+
+.content__name-of-book {
+	color: #444c63;
+	font-weight: normal;
+	margin: 16px 0 10px 0;
+}
+
+.content__author {
+	color: #6f7d95;
+	font-weight: normal;
+	margin: 0 0 10px 0;
+}
+
+.content__rating_star,
+.content__rating_half-star,
+.content__rating_empty-star {
+	color: #ffab00;
+}
+
 .footer {
 	display: flex;
 	flex-basis: 5%;
 	background: #444c63;
 	justify-content: flex-end;
+	border-bottom-right: 5px;
+	border-bottom-left: 5px;
 }
 
 .footer-menu{
 	display: flex;
+}
+
+.footer-menu__item {
+	padding: 15px 20px;
+}
+
+.footer-menu__item_question {
+	background: #1f2637;
+}
+
+.footer-menu__item_question_settings {
+	background: #15a4fa;
+	border-bottom-right: 5px;
+}
+
+.footer-menu__link {
+	color: #fff;
 }
