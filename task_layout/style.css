@@ -29,6 +29,11 @@ a{
 	background: #2f364a;
 	flex-basis: 5%;
 	border-radius: 5px 5px 0 0;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 3;
+	width: 100%;
 }
 
 .header-menu {
@@ -101,7 +106,8 @@ a{
 }
 
 .main {
-	display: flex;	
+	display: flex;
+	margin-top: 4%;
 }
 
 .left-side {
@@ -110,7 +116,7 @@ a{
 	flex-basis: 280px;
 	height: 100%;
 	background: #19202e;
-	margin-bottom: 52px;
+	margin-bottom: 32px;
 }
 
 .nav-add,
@@ -227,12 +233,12 @@ a{
 .section {
     display: flex;
     flex-direction: column;
-	justify-content: flex-start;
+    height: 893px;
 }
 
 .inner-menu {
 	background: #eef1f7;
-	z-index: 1;
+	z-index: 2;
 	height: 120px;
 }
 
@@ -332,13 +338,14 @@ a{
 .content {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: flex-start;
 	overflow-y: scroll;
 	margin-bottom: 32px;
+	height: 100%;
 }
 
 .content__item {
-	margin: 29px 10px 15px;
+	margin: 29px 20px 15px 20px;
 }
 
 .content__name-of-book {
@@ -392,4 +399,41 @@ a{
 
 .footer-menu__link {
 	color: #fff;
+}
+
+.footer-menu__item:hover .footer-menu__link{
+	color: #ccc;
+}
+
+
+
+::-webkit-scrollbar-button { 
+	background-image:url(''); 
+	background-repeat:no-repeat; 
+	width:6px; 
+	height:0px 
+} 
+
+::-webkit-scrollbar-track { 
+	background-color:#fff;
+}
+
+::-webkit-scrollbar-track:hover {
+	background-color: #dce5f4;
+	border: 1px solid #98a1b1;
+} 
+
+::-webkit-scrollbar-thumb {  
+	background-color:#CBD4E3; 
+	border: 1px solid #98a1b1;  
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color:#a9b2c1;
+	border: 1px solid #98a1b1;
+}
+
+::-webkit-scrollbar{ 
+	width: 11px; 
 }
