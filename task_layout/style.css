@@ -3,7 +3,7 @@ body {
 	margin: 0;
 	height: 100%;
 	font-family: 'Proxima Nova Regular', Arial, sans-serif;
-	font-size: 13pt; 
+	font-size: 13pt;
 }
 
 @font-face{
@@ -26,7 +26,7 @@ a{
 
 .header {
 	background: #2f364a;
-	flex-basis: 5%;
+	flex-basis: 46px;
 	border-radius: 5px 5px 0 0;
 	position: fixed;
 	top: 0;
@@ -42,7 +42,7 @@ a{
 }
 
 .header-menu__item {
-	padding: 18px 12px;
+	padding: 14px 12px;
 }
 
 .header-menu__link {
@@ -67,7 +67,7 @@ a{
 	display: flex;
 	align-items: center;
 	background: #15a4fa;
-	padding: 12px 22px 12px 10px;
+	padding: 10px 22px 10px 10px;
 	border-top-right-radius: 5px;
 	transition: .3s;
 }
@@ -106,13 +106,13 @@ a{
 
 .main {
 	display: flex;
-	margin-top: 4%;
+	margin-top: 46px;
 }
 
 .left-side {
 	display: flex;
 	flex-direction: column;
-	flex-basis: 280px;
+	flex-basis: 400px;
 	height: 100%;
 	background: #19202e;
 	margin-bottom: 32px;
@@ -126,6 +126,7 @@ a{
 	border-top: 1px solid #282f41;
 	border-bottom: 1px solid #141824;
 	margin-bottom: 4px;
+	font-size: 1.1em;
 }
 
 .nav-add {
@@ -201,7 +202,7 @@ a{
 }
 
 .notifications-list__item {
-	width: 156px;
+	width: 200px;
 }
 
 .notifications-list__item,
@@ -366,7 +367,7 @@ a{
 }
 
 .footer {
-	height: 52px;
+	height: 46px;
 	background: #444c63;
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
