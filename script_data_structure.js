@@ -214,7 +214,13 @@ capitalizeFirstLetter(str);
 //-----task21-----
 
 function camelize(string) {
-  var arr = string.split("-"||" ");
+
+ var arr = string.split("-");
+
+  for (var j = 0; j < arr.length; j++) {
+    if (arr[i] === " ") splice(i,1);
+  }
+ 
 
   for (var i = 1; i < arr.length; i++) {
     arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
