@@ -1,4 +1,4 @@
-//1,2,3,4,5,6,7,8,9,10,11
+//1,2,3,4,5,6,7,8,9,10,11,15,19,20
 
 //-----task1-----
 var now = new Date();
@@ -153,3 +153,89 @@ function removeZero(array) {
 var arr = ["Lemon", undefined, "Apple", null, 0, false, "Melow", "", "Lemon", NaN, "Cherry", "Pear", "Cherry"];
 
 removeZero(arr);
+
+//-----task12-----
+
+var library = [
+
+{ author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+
+{ author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
+
+{ author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
+
+];
+
+library.sort([0].title[]);
+
+//-----task13-----
+
+//-----task14-----
+
+//-----task15-----
+
+var arr = [1,9,0,5,3,5,7,6,5,4,7,8,3,7,7];
+
+function getRandomItem(array) {
+
+  var random = Math.floor(Math.random() * array.length);
+  return array[random];
+}
+
+console.log(getRandomItem(arr));
+
+//-----task16-----
+
+//-----task17-----
+
+//-----task18-----
+
+//-----task19-----
+
+var str = "Lemon, Apple, Melow, Lemon, Cherry, Pear, Cherry";
+
+function createArrayFromString(string) {
+  var arr = string.split(", ");
+  return arr;
+}
+
+createArrayFromString(str);
+
+//-----task20-----
+
+var str = "nbjk ndgjrdi klbioytg";
+
+function capitalizeFirstLetter(string) {
+  return string[0].toUpperCase() + string.slice(1);
+}
+
+capitalizeFirstLetter(str);
+
+//-----task21-----
+
+function camelize(string) {
+  var arr = string.split("-"||" ");
+
+  for (var i = 1; i < arr.length; i++) {
+    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+  }
+  return arr.join("");
+}
+
+console.log(camelize("Java Script"));
+
+console.log(camelize("java-script"));
+
+console.log(camelize("Java Script Exercises"));
+
+//-----task22-----
+
+//-----task23-----
+
+//-----task24-----
+
+//-----task25-----
+
+//-----task26-----
+
+//-----task27-----
