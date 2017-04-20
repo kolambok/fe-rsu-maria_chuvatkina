@@ -1,4 +1,4 @@
-//1,2,3,4,5,6,7,8,9,10
+//1,2,3,4,5,6,7,8,9,10,11
 
 //-----task1-----
 var now = new Date();
@@ -130,3 +130,26 @@ function shuffleArray(array) {
 arr.sort(shuffleArray);
 
 console.log(arr);
+
+//-----task11-----
+
+function removeZero(array) {
+
+  for (var i = 0; i < array.length; i++) {
+
+  	if (array[i] === undefined
+  		|| array[i] === null
+  		|| Number.isNaN(array[i])
+  		|| array[i] === "") {
+      array.splice(i,1);
+    }
+
+    if (array[i] === 0) array.splice(i,1);
+    if (array[i] === false) array.splice(i,1);
+  }
+  return array;
+}
+
+var arr = ["Lemon", undefined, "Apple", null, 0, false, "Melow", "", "Lemon", NaN, "Cherry", "Pear", "Cherry"];
+
+removeZero(arr);
