@@ -1,4 +1,4 @@
-//1,2,3,4,5,6,7,8,9,10,11,15,19,20
+//1,2,3,4,5,6,7,8,9,10,11,15,19,20,21,22,23,24,25,26,27
 
 //-----task1-----
 var now = new Date();
@@ -42,12 +42,12 @@ var result;
 
 function is_array(data) {
 
-    if (typeof(data) == "object") {
-      result = "array";
-    } else {
-      result = "not array";
-    }
-     return result;
+  if (typeof(data) == "object") {
+    result = "array";
+  } else {
+    result = "not array";
+  }
+  return result;
 }
 
 console.log(is_array(string));
@@ -124,7 +124,7 @@ ignoreDuplicate(arr);
 var arr = [1,9,0,5,3,5,7,6,5,4,7,8,3,7,7];
 
 function shuffleArray(array) {
-	return Math.random() - 0.5;
+  return Math.random() - 0.5;
 }
 
 arr.sort(shuffleArray);
@@ -137,10 +137,10 @@ function removeZero(array) {
 
   for (var i = 0; i < array.length; i++) {
 
-  	if (array[i] === undefined
-  		|| array[i] === null
-  		|| Number.isNaN(array[i])
-  		|| array[i] === "") {
+    if (array[i] === undefined
+  	  || array[i] === null
+  	  || Number.isNaN(array[i])
+  	  || array[i] === "") {
       array.splice(i,1);
     }
 
@@ -215,16 +215,18 @@ capitalizeFirstLetter(str);
 
 function camelize(string) {
 
- var arr = string.split("-");
+var arr;
 
-  for (var j = 0; j < arr.length; j++) {
-    if (arr[i] === " ") splice(i,1);
-  }
- 
+if (!!(~string.indexOf("-"))) {
+  arr = string.split("-");
+} else if (!!(~string.indexOf(" "))) {
+  arr = string.split(" ");
+}
 
   for (var i = 1; i < arr.length; i++) {
     arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
   }
+
   return arr.join("");
 }
 
@@ -236,12 +238,95 @@ console.log(camelize("Java Script Exercises"));
 
 //-----task22-----
 
+var arr = [1,9,0,5,3,5,7,6,5,4,7,8,3,7];
+
+function findHighestValue(a,b) {
+  if (a < b) return 1;
+  if (a > b) return -1;
+}
+
+arr.sort(findHighestValue);
+console.log(arr[0]);
+
 //-----task23-----
+
+var arr = [1,9,0,5,3,5,7,6,5,4,7,8,3,7];
+
+function findHighestValue(a,b) {
+  if (a > b) return 1;
+  if (a < b) return -1;
+}
+
+arr.sort(findHighestValue);
+console.log(arr[0]);
 
 //-----task24-----
 
+var number = 5;
+var string = "Abrakadabra";
+var boolean = true;
+var nothing = null;
+var all = NaN;
+var anotherNumber = 255.55;
+
+function isNumeric(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+console.log(isNumeric(number));
+console.log(isNumeric(string));
+console.log(isNumeric(boolean));
+console.log(isNumeric(nothing));
+console.log(isNumeric(all));
+console.log(isNumeric(anotherNumber));
+
 //-----task25-----
+
+var arr = [1,9,0,NaN,5,3,5,7,null,6,"Gag",5,4,undefined,7,8,3,7];
+
+function calcArray(array) {
+  var sum = 0;
+
+  for (var i = 0; i < array.length; i++) {
+
+    if (array[i] === "" || array[i] === null || isNaN(array[i])) {
+      array.splice(i,1);
+    }
+      sum += array[i];
+  }
+  return sum;
+}
+
+console.log(calcArray(arr));
 
 //-----task26-----
 
+var table = {
+  width: 50,
+  length: 100,
+  height: 120,
+  color: "Birch",
+  items: null
+};
+
+var counter = 0;
+
+for (key in table) {
+  counter++;
+}
+
+console.log("Length: "+counter);
+
 //-----task27-----
+
+var table = {
+  width: 50,
+  length: 100,
+  height: 120,
+  color: "Birch",
+  items: null
+};
+
+for (key in table) {
+  console.log(key);
+}
