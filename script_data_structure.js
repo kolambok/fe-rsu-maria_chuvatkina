@@ -1,15 +1,15 @@
-//1,2,3,4,5,6,7,8,9,10,11,15,19,20,21,22,23,24,25,26,27
+//1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27
 
 //-----task1-----
 var now = new Date();
 var options = {
-    weekday: 'long',
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric'
+    weekday: "long",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric"
 };
 
-console.log("Today is: "+now.toLocaleString('en-US', options));
+console.log("Today is: " + now.toLocaleString("en-US", options));
 
 //-----task2-----
 
@@ -28,21 +28,21 @@ for (var year = new Date(2014); year <= new Date(2050); year++) {
 
 //-----task4-----
 
-  var now = new Date();
-  var nextNewYear = new Date(now.getFullYear()+1,0,1);
+var now = new Date();
+var nextNewYear = new Date(now.getFullYear() + 1, 0, 1);
 
-  var daysUntil = Math.round((nextNewYear - now)/1000/3600/24);
-  console.log(daysUntil);
+var daysUntil = Math.round((nextNewYear - now) / 1000 / 3600 / 24);
+console.log(daysUntil);
 
 //-----task5-----
 
-var array = [1,2,3,4,5];
+var array = [1, 2, 3, 4, 5];
 var string = "nfjbhjngv";
 var result;
 
 function is_array(data) {
 
-  if (typeof(data) == "object") {
+  if (typeof(data) === "object") {
     result = "array";
   } else {
     result = "not array";
@@ -59,7 +59,7 @@ function cloneArrray(array) {
   return arrClone;
 }
 
-var arr = [1,9,0,5,3,5,7,6,5,4,7,8,3,7];
+var arr = [1, 9, 0, 5, 3, 5, 7, 6, 5, 4, 7, 8, 3, 7];
 
 cloneArrray(arr);
 
@@ -75,7 +75,7 @@ var element;
     for (var j = i; j < array.length; j++) {
 
       if (array[j] == array[i]) countArray++;
-				
+
       if (countCloneArray < countArray) {
         countCloneArray = countArray;
         element = array[i];
@@ -84,10 +84,10 @@ var element;
     }
     countArray = 0;
   }
-  return (element+" shows "+countCloneArray+" times");
+  return (element + " shows " + countCloneArray + " times");
 }
 
-var arr = [1,9,0,5,3,5,7,6,5,4,7,8,3,7,7];
+var arr = [1, 9, 0, 5, 3, 5, 7, 6, 5, 4, 7, 8, 3, 7, 7];
 frequency(arr);
 
 //-----task8-----
@@ -105,11 +105,11 @@ function ignoreDuplicate(strarr) {
 
   for (var i = 0; i < strarr.length; i++) {
 
-  	for (var j = i + 1; j < strarr.length; j++) {
+    for (var j = i + 1; j < strarr.length; j++) {
 
-  	  if (strarr[i] === strarr[j]) {
-  		strarr.splice(j,1);
-  	  }
+      if (strarr[i] === strarr[j]) {
+        strarr.splice(j,1);
+      }
     }
   }
   return strarr;
@@ -121,9 +121,9 @@ ignoreDuplicate(arr);
 
 //-----task10-----
 
-var arr = [1,9,0,5,3,5,7,6,5,4,7,8,3,7,7];
+var arr = [1, 9, 0, 5, 3, 5, 7, 6, 5, 4, 7, 8, 3, 7, 7];
 
-function shuffleArray(array) {
+function shuffleArray() {
   return Math.random() - 0.5;
 }
 
@@ -138,9 +138,9 @@ function removeZero(array) {
   for (var i = 0; i < array.length; i++) {
 
     if (array[i] === undefined
-  	  || array[i] === null
-  	  || Number.isNaN(array[i])
-  	  || array[i] === "") {
+      || array[i] === null
+      || Number.isNaN(array[i])
+      || array[i] === "") {
       array.splice(i,1);
     }
 
@@ -158,23 +158,61 @@ removeZero(arr);
 
 var library = [
 
-{ author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+{ author: "Bill Gates", title: "The Road Ahead", libraryID: 1254},
 
-{ author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
+{ author: "Steve Jobs", title: "Walter Isaacson", libraryID: 4264},
 
-{ author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
+{ author: "Suzanne Collins", title: "Mockingjay: The Final Book of The Hunger Games", libraryID: 3245}
 
 ];
 
-library.sort([0].title[]);
+var result = library.sort(function(a,b) {
+
+  if (a.title < b.title) return -1;
+  if (a.title > b.title) return 1;
+  return 0;
+});
+
+
+for(var i in result){
+  console.log(result[i]);
+}
 
 //-----task13-----
 
+var arr1 = [1, 9, 0, 5, 3, 5];
+var arr2 = [7, 6, 5, 4, 7, 8, 3, 7, 7];
+
+function mergeArrays(array1,array2) {
+
+  var array3 = array1.concat(array2);
+
+  for (var i = 0; i < array3.length; i++) {
+    for (var j = i + 1; j < array3.length; j++) {
+      if (array3[i] === array3[j]) {
+        array3.splice(j,1);
+      }
+    }
+  }
+  return array3;
+}
+
+mergeArrays(arr1,arr2);
+
 //-----task14-----
+
+function removeElementOfArray(array,x) {
+  var index = array.indexOf(x);
+  if (index > -1) array.splice(index,1);
+  return array;
+}
+var arr = ["Lemon", "Apple", "Melow", "Cherry", "Pear"];
+
+removeElementOfArray(arr,"Apple");
 
 //-----task15-----
 
-var arr = [1,9,0,5,3,5,7,6,5,4,7,8,3,7,7];
+var arr = [1, 9, 0, 5, 3, 5, 7, 6, 5, 4, 7, 8, 3, 7, 7];
 
 function getRandomItem(array) {
 
@@ -186,9 +224,43 @@ console.log(getRandomItem(arr));
 
 //-----task16-----
 
+var arr = ["Lemon", "Apple", "Melow", "Cherry", "Pear"];
+
+function moveElement(array, x, pos) {
+  var index = array.indexOf(x);
+  array.splice(pos, 0, array[index]);
+  array.splice(index, 1);
+  return array;
+}
+
+moveElement(arr, "Apple", -1);
+
 //-----task17-----
 
+function getDifferenceInDays(date1, date2) {
+  var diff = date2 - date1;
+  return (Math.round(diff / 1000 / 60 / 60 / 24) + " days between " + date1.toDateString() + " and " + date2.toDateString());
+}
+
+var date1 = new Date(2017, 4, 1);
+var date2 = new Date(2017, 4, 15);
+
+getDifferenceInDays(date1, date2);
+
 //-----task18-----
+
+var dArray = ["2015/02/01", "2015/02/02","2015/01/03"];
+var date = dArray.slice();
+
+function maxDate(a, b) {
+
+  if (a > b) return -1;
+  if (a < b) return 1;
+  return 0;
+}
+
+date.sort(maxDate);
+console.log(date[0]);
 
 //-----task19-----
 
@@ -238,9 +310,9 @@ console.log(camelize("Java Script Exercises"));
 
 //-----task22-----
 
-var arr = [1,9,0,5,3,5,7,6,5,4,7,8,3,7];
+var arr = [1, 9, 0, 5, 3, 5, 7, 6, 5, 4, 7, 8, 3, 7];
 
-function findHighestValue(a,b) {
+function findHighestValue(a, b) {
   if (a < b) return 1;
   if (a > b) return -1;
 }
@@ -250,14 +322,14 @@ console.log(arr[0]);
 
 //-----task23-----
 
-var arr = [1,9,0,5,3,5,7,6,5,4,7,8,3,7];
+var arr = [1, 9, 0, 5, 3, 5, 7, 6, 5, 4, 7, 8, 3, 7];
 
-function findHighestValue(a,b) {
+function findLowestValue(a, b) {
   if (a > b) return 1;
   if (a < b) return -1;
 }
 
-arr.sort(findHighestValue);
+arr.sort(findLowestValue);
 console.log(arr[0]);
 
 //-----task24-----
@@ -282,7 +354,7 @@ console.log(isNumeric(anotherNumber));
 
 //-----task25-----
 
-var arr = [1,9,0,NaN,5,3,5,7,null,6,"Gag",5,4,undefined,7,8,3,7];
+var arr = [1, 9, 0, NaN, 5, 3, 5, 7, null, 6, "Gag", 5, 4, undefined, 7, 8, 3, 7];
 
 function calcArray(array) {
   var sum = 0;
@@ -290,7 +362,7 @@ function calcArray(array) {
   for (var i = 0; i < array.length; i++) {
 
     if (array[i] === "" || array[i] === null || isNaN(array[i])) {
-      array.splice(i,1);
+      array.splice(i, 1);
     }
       sum += array[i];
   }
@@ -311,11 +383,11 @@ var table = {
 
 var counter = 0;
 
-for (key in table) {
+for (var key in table) {
   counter++;
 }
 
-console.log("Length: "+counter);
+console.log("Length: " + counter);
 
 //-----task27-----
 
@@ -327,6 +399,6 @@ var table = {
   items: null
 };
 
-for (key in table) {
+for (var key in table) {
   console.log(key);
 }
