@@ -3,10 +3,10 @@
 //-----task1-----
 var now = new Date();
 var options = {
-    weekday: "long",
-    hour: "numeric",
-    minute: "numeric",
-    second: "numeric"
+  weekday: "long",
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric"
 };
 
 console.log("Today is: " + now.toLocaleString("en-US", options));
@@ -20,10 +20,11 @@ console.log(now);
 
 for (var year = new Date(2014); year <= new Date(2050); year++) {
 
-  var dateJanSunday = new Date(year,0,1);
+  var dateJanSunday = new Date(year, 0, 1);
 
-  if (dateJanSunday.getDay() === 0)
-    console.log("1st January, Sunday "+year);
+  if (dateJanSunday.getDay() === 0) {
+    console.log("1st January, Sunday " + year);
+  }
 }
 
 //-----task4-----
@@ -40,9 +41,9 @@ var array = [1, 2, 3, 4, 5];
 var string = "nfjbhjngv";
 var result;
 
-function is_array(data) {
+function isArray(data) {
 
-  if (typeof(data) === "object") {
+  if (typeof (data) === "object") {
     result = "array";
   } else {
     result = "not array";
@@ -50,7 +51,7 @@ function is_array(data) {
   return result;
 }
 
-console.log(is_array(string));
+console.log(isArray(string));
 
 //-----task6-----
 
@@ -66,9 +67,9 @@ cloneArrray(arr);
 //-----task7-----
 
 function frequency(array) {
-var countArray = 0;
-var countCloneArray = 1;
-var element;
+  var countArray = 0;
+  var countCloneArray = 1;
+  var element;
 
   for (var i = 0; i < array.length; i++) {
 
@@ -79,7 +80,7 @@ var element;
       if (countCloneArray < countArray) {
         countCloneArray = countArray;
         element = array[i];
-        }
+      }
 
     }
     countArray = 0;
@@ -94,7 +95,7 @@ frequency(arr);
 
 function changeCase(string) {
   var reverse = string[0].toLowerCase() + string.slice(1).toUpperCase();
-  return reverse; 
+  return reverse;
 }
 
 changeCase("Powercase");
@@ -108,7 +109,7 @@ function ignoreDuplicate(strarr) {
     for (var j = i + 1; j < strarr.length; j++) {
 
       if (strarr[i] === strarr[j]) {
-        strarr.splice(j,1);
+        strarr.splice(j, 1);
       }
     }
   }
@@ -141,11 +142,16 @@ function removeZero(array) {
       || array[i] === null
       || Number.isNaN(array[i])
       || array[i] === "") {
-      array.splice(i,1);
+      array.splice(i, 1);
     }
 
-    if (array[i] === 0) array.splice(i,1);
-    if (array[i] === false) array.splice(i,1);
+    if (array[i] === 0) {
+      array.splice(i, 1);
+    }
+
+    if (array[i] === false) {
+      array.splice(i, 1);
+    }
   }
   return array;
 }
@@ -158,23 +164,27 @@ removeZero(arr);
 
 var library = [
 
-{ author: "Bill Gates", title: "The Road Ahead", libraryID: 1254},
+  { author: "Bill Gates", title: "The Road Ahead", libraryID: 1254 },
 
-{ author: "Steve Jobs", title: "Walter Isaacson", libraryID: 4264},
+  { author: "Steve Jobs", title: "Walter Isaacson", libraryID: 4264 },
 
-{ author: "Suzanne Collins", title: "Mockingjay: The Final Book of The Hunger Games", libraryID: 3245}
+  { author: "Suzanne Collins", title: "Mockingjay: The Final Book of The Hunger Games", libraryID: 3245 }
 
 ];
 
-var result = library.sort(function(a,b) {
+var result = library.sort(function (a, b) {
 
-  if (a.title < b.title) return -1;
-  if (a.title > b.title) return 1;
-  return 0;
+  if (a.title < b.title) {
+    return -1;
+  } else if (a.title > b.title) {
+    return 1;
+  } else {
+    return 0;
+  }
 });
 
 
-for(var i in result){
+for (var i in result) {
   console.log(result[i]);
 }
 
@@ -183,32 +193,34 @@ for(var i in result){
 var arr1 = [1, 9, 0, 5, 3, 5];
 var arr2 = [7, 6, 5, 4, 7, 8, 3, 7, 7];
 
-function mergeArrays(array1,array2) {
+function mergeArrays(array1, array2) {
 
   var array3 = array1.concat(array2);
 
   for (var i = 0; i < array3.length; i++) {
     for (var j = i + 1; j < array3.length; j++) {
       if (array3[i] === array3[j]) {
-        array3.splice(j,1);
+        array3.splice(j, 1);
       }
     }
   }
   return array3;
 }
 
-mergeArrays(arr1,arr2);
+mergeArrays(arr1, arr2);
 
 //-----task14-----
 
-function removeElementOfArray(array,x) {
+function removeElementOfArray(array, x) {
   var index = array.indexOf(x);
-  if (index > -1) array.splice(index,1);
+  if (index > -1) {
+    array.splice(index, 1);
+  }
   return array;
 }
 var arr = ["Lemon", "Apple", "Melow", "Cherry", "Pear"];
 
-removeElementOfArray(arr,"Apple");
+removeElementOfArray(arr, "Apple");
 
 //-----task15-----
 
@@ -249,13 +261,16 @@ getDifferenceInDays(date1, date2);
 
 //-----task18-----
 
-var dArray = ["2015/02/01", "2015/02/02","2015/01/03"];
+var dArray = ["2015/02/01", "2015/02/02", "2015/01/03"];
 var date = dArray.slice();
 
 function maxDate(a, b) {
 
-  if (a > b) return -1;
-  if (a < b) return 1;
+  if (a > b) {
+    return -1;
+  } else if (a < b) {
+    return 1;
+  }
   return 0;
 }
 
@@ -287,13 +302,13 @@ capitalizeFirstLetter(str);
 
 function camelize(string) {
 
-var arr;
+  var arr;
 
-if (!!(~string.indexOf("-"))) {
-  arr = string.split("-");
-} else if (!!(~string.indexOf(" "))) {
-  arr = string.split(" ");
-}
+  if (string.indexOf("-") >= 0) {
+    arr = string.split("-");
+  } else if (string.indexOf(" ") >= 0) {
+    arr = string.split(" ");
+  }
 
   for (var i = 1; i < arr.length; i++) {
     arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
@@ -313,8 +328,14 @@ console.log(camelize("Java Script Exercises"));
 var arr = [1, 9, 0, 5, 3, 5, 7, 6, 5, 4, 7, 8, 3, 7];
 
 function findHighestValue(a, b) {
-  if (a < b) return 1;
-  if (a > b) return -1;
+  if (a < b) {
+    return 1;
+  }
+  if (a > b) {
+    return -1;
+  } else {
+    return 0;
+  }
 }
 
 arr.sort(findHighestValue);
@@ -325,8 +346,14 @@ console.log(arr[0]);
 var arr = [1, 9, 0, 5, 3, 5, 7, 6, 5, 4, 7, 8, 3, 7];
 
 function findLowestValue(a, b) {
-  if (a > b) return 1;
-  if (a < b) return -1;
+  if (a > b) {
+    return 1;
+  }
+  if (a < b) {
+    return -1;
+  } else {
+    return 0;
+  }
 }
 
 arr.sort(findLowestValue);
@@ -364,7 +391,7 @@ function calcArray(array) {
     if (array[i] === "" || array[i] === null || isNaN(array[i])) {
       array.splice(i, 1);
     }
-      sum += array[i];
+    sum += array[i];
   }
   return sum;
 }
