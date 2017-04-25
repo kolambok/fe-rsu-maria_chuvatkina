@@ -43,3 +43,51 @@ console.log(isAllTrue(noNumbers, isNumber)); //вернет false
 
 //-----task3-----
 
+function Calculator() {
+	var currentState = 0;
+
+	return {
+
+		getResult: function() {
+	    	return currentState;
+	    },
+
+		add: function(a) {
+			currentState += a;
+			return function(b) {
+			currentState = a + b;
+			};
+	    },
+
+	    subtract: function(a) {
+	    	currentState -= a;
+	    },
+
+	    multiply: function(a) {
+	    	return currentState *= a;
+	    },
+
+	    divide: function(a) {
+	    	return currentState /= a;
+	    },
+
+	    reset: function() {
+	    	currentState = 0;
+	    } 
+  };
+}
+
+var calc = Calculator();
+
+console.log(calc.getResult());
+
+calc.add(5);
+calc.subtract(1);
+calc.divide(2);
+calc.multiply(3);
+
+console.log(calc.getResult());
+
+calc.reset();
+
+console.log(calc.getResult());
