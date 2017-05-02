@@ -39,53 +39,53 @@ console.log(isAllTrue(allNumbers, isNumber)); //вернет true
 console.log(isAllTrue(someNumbers, isNumber)); //вернет false
 console.log(isAllTrue(noNumbers, isNumber)); //вернет false
 
+
 //-----task3-----
 
-function Calculator() {
-	var currentState = 0;
+var Calculator = {
+	currentState: 0,
 
-	return {
+	add: function(a) {
+		this.currentState = this.currentState + a;
+		return function(b) {
+			return Calculator.add(b);
+		};
+	},
 
-		getResult: function() {
-	    	return currentState;
-	    },
+	substract: function(a) {
+		this.currentState = this.currentState - a;
+		return function(b) {
+			return Calculator.substract(b);
+		};
+	},
 
-		add: function(a) {
-			currentState += a;
-			return function(b) {
-			currentState = a + b;
-			};
-	    },
+	divide: function(a) {
+		this.currentState = this.currentState / a;
+		return function(b) {
+			return Calculator.divide(b);
+		};
+	},
 
-	    subtract: function(a) {
-	    	currentState -= a;
-	    },
+	multiply: function(a) {
+		this.currentState = this.currentState * a;
+		return function(b) {
+			return Calculator.multiply(b);
+		};
+	},
 
-	    multiply: function(a) {
-	    	return currentState *= a;
-	    },
+	getResult: function() {
+		return this.currentState;
+	},
 
-	    divide: function(a) {
-	    	return currentState /= a;
-	    },
+	reset: function() {
+		return this.currentState = 0;
+	}
 
-	    reset: function() {
-	    	currentState = 0;
-	    } 
-  };
-}
+};
 
-var calc = Calculator();
-
-console.log(calc.getResult());
-
-calc.add(5);
-calc.subtract(1);
-calc.divide(2);
-calc.multiply(3);
-
-console.log(calc.getResult());
-
-calc.reset();
-
-console.log(calc.getResult());
+Calculator.add(1)(2)(7);
+console.log(Calculator.getResult());
+Calculator.divide(2)(2.5);
+console.log(Calculator.getResult());
+Calculator.reset();
+console.log(Calculator.getResult());
