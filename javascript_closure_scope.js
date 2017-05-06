@@ -42,50 +42,52 @@ console.log(isAllTrue(noNumbers, isNumber)); //вернет false
 
 //-----task3-----
 
-var Calculator = {
-	currentState: 0,
 
-	add: function(a) {
-		this.currentState = this.currentState + a;
-		return function(b) {
-			return Calculator.add(b);
-		};
-	},
+function Calculator(a) {
+  var currentState = a;
 
-	substract: function(a) {
-		this.currentState = this.currentState - a;
-		return function(b) {
-			return Calculator.substract(b);
-		};
+  
+
+  return { 
+  	add: function(a) {
+  	currentState += a;
+  	 return function(b) {
+       return currentState = a + b;
+  	 };
+  },
+
+	subtract: function(a) {
+		return currentState -= a;
 	},
 
 	divide: function(a) {
-		this.currentState = this.currentState / a;
-		return function(b) {
-			return Calculator.divide(b);
-		};
+		return currentState /= a;
 	},
 
 	multiply: function(a) {
-		this.currentState = this.currentState * a;
-		return function(b) {
-			return Calculator.multiply(b);
-		};
-	},
-
-	getResult: function() {
-		return this.currentState;
+		return currentState *= a;
 	},
 
 	reset: function() {
-		return this.currentState = 0;
+		return currentState = 0;
+	},
+
+	getResult: function() {
+		return currentState;
 	}
+  };
+}
 
-};
 
-Calculator.add(1)(2)(7);
-console.log(Calculator.getResult());
-Calculator.divide(2)(2.5);
-console.log(Calculator.getResult());
-Calculator.reset();
-console.log(Calculator.getResult());
+var calc = new Calculator(0);
+
+
+console.log(calc.getResult());
+calc.add(7);
+calc.subtract(2);
+console.log(calc.getResult());
+calc.divide(2);
+calc.multiply(3);
+console.log(calc.getResult());
+calc.reset();
+console.log(calc.getResult());
